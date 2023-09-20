@@ -49,6 +49,7 @@ public class JumpOverGoomba : MonoBehaviour
                 score++;
                 scoreText.text = "Score: " + score.ToString();
                 Debug.Log(score);
+                //Check-off 1
                 endScoreText.text = scoreText.text;
             }
         }
