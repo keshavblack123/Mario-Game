@@ -26,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
         Application.targetFrameRate = 30; //Set 30 FPS
         marioBody = GetComponent<Rigidbody2D>();
         marioSprite = GetComponent<SpriteRenderer>();
-        // gameOverScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -114,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
         }
         // reset score
         jumpOverGoomba.score = 0;
+        //Check-off 1
         gameOverScreen.SetActive(false);
         gameplayCanvas.enabled = true;
     }
