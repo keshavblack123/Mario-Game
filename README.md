@@ -1,1 +1,2 @@
-# Game-Dev-Lab-Checkoff
+# Game Dev Lab Checkoff
+Check-off is at Assets > Scripts
