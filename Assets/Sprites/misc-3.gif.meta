@@ -479,6 +479,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: moving_platform_6
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1201
+        width: 48
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f2c37b9cd71444bbb147a978e02f51
+      internalID: -109714726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_platform_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1201
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7b517eac56f45728ce326092ae7f57
+      internalID: -41137177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moving_platform_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1190
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b91a1915a4b46cfa35a45698bb2c15
+      internalID: 55743552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -502,6 +565,9 @@ TextureImporter:
       goomba_left: -1302705008
       goomba_right: -1439708185
       ground_brown: -501341937
+      moving_platform_3: -41137177
+      moving_platform_4: 55743552
+      moving_platform_6: -109714726
       muchroom: -2118664041
       pipe_body: -129688477
       pipe_head: 553011785
