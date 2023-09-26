@@ -25,9 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public float deathImpulse;
     public Transform gameCamera;
     int collisionLayerMask = (1 << 3) | (1 << 6) | (1 << 7);
+    public Animator emptyBrickAnimator;
 
     // To do:
-    // Ask about double sound
     // eng game screen not following
 
     [System.NonSerialized]
@@ -73,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
             // update animator state
             marioAnimator.SetBool("onGround", onGroundState);
         }
+
     }
 
     void FixedUpdate() //Called 50x per second
@@ -115,6 +116,10 @@ public class PlayerMovement : MonoBehaviour
             marioAudio.PlayOneShot(marioDeath);
             alive = false;
             // EndGame();
+        }
+        else if (other.gameObject.CompareTag("Empty"))
+        {
+            emptyBrickAnimator.SetTrigger("hitTheBox");
         }
     }
 
