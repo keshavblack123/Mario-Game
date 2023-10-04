@@ -6,9 +6,11 @@ public class CoinController : MonoBehaviour
 {
     public Animator coinAnimator;
     public AudioClip coinCollected;
-    // public AudioSource coinAudio;
     public Animator boxAnimator;
     public AudioSource coinAudio;
+
+    [System.NonSerialized]
+    public int score = 0; // we don't want this to show up in the inspector
 
 
     // Start is called before the first frame update

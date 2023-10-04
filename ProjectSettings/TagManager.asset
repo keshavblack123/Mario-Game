@@ -9,6 +9,7 @@ TagManager:
   - Box
   - coin
   - Empty
+  - EnemyHead
   layers:
   - Default
   - TransparentFX

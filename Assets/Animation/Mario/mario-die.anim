@@ -80,8 +80,8 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.1666666
-    functionName: EndGame
+  - time: 0.51666665
+    functionName: GameOver
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
