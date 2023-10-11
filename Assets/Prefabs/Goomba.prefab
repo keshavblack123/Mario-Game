@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1302705008, guid: 82bc45c4496284f4c823d1b837f65ec4, type: 3}
+  m_Sprite: {fileID: -1439708185, guid: 82bc45c4496284f4c823d1b837f65ec4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -210,22 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ef593ddfcc14ad29cd24c93f231dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameter: 0
-  useInt:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &5110317762181741528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,9 +222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a89a521af02849cdb4bf2e68f3615ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goombaAnimator: {fileID: 5393718892773701642}
-  goombaObject: {fileID: 0}
-  goombaAudio: {fileID: 829057125485735973}
 --- !u!82 &829057125485735973
 AudioSource:
   m_ObjectHideFlags: 0
@@ -373,7 +354,7 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.45589083, y: -0.25630307}
-  - {x: 0.15632893, y: -0.25413662}
+  - {x: 0.42830968, y: -0.25413662}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

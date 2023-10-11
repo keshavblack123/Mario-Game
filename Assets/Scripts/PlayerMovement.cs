@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 10;
-    public float maxSpeed = 20;
     private Rigidbody2D marioBody;
-    public float upSpeed = 10;
     private bool onGroundState = true;
     private SpriteRenderer marioSprite;
     private bool faceRightState = true;
@@ -17,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator marioAnimator;
     public AudioSource marioAudio;
     public AudioSource marioDeathAudio;
-    public float deathImpulse;
     public Transform gameCamera;
     int collisionLayerMask = (1 << 3) | (1 << 6) | (1 << 7);
     public Animator emptyBrickAnimator;
@@ -26,15 +23,31 @@ public class PlayerMovement : MonoBehaviour
     public bool alive = true;
     private bool moving = false;
     private bool jumpedState = false;
-    public GameManager gameManager;
+    public GameConstants gameConstants;
+    float deathImpulse;
+    float upSpeed;
+    float maxSpeed;
+    float speed;
+
+
+    void Awake()
+    {
+        GameManager.instance.gameRestart.AddListener(GameRestart);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        // Set constants
+        speed = gameConstants.speed;
+        maxSpeed = gameConstants.maxSpeed;
+        deathImpulse = gameConstants.deathImpulse;
+        upSpeed = gameConstants.upSpeed;
         Application.targetFrameRate = 30; //Set 30 FPS
         marioBody = GetComponent<Rigidbody2D>();
         marioSprite = GetComponent<SpriteRenderer>();
         marioAnimator.SetBool("onGround", onGroundState);
+        // SceneManager.activeSceneChanged += SetStartingPosition;
     }
 
     // Update is called once per frame
@@ -138,11 +151,6 @@ public class PlayerMovement : MonoBehaviour
             marioDeathAudio.PlayOneShot(marioDeathAudio.clip);
             alive = false;
         }
-
-        else if (other.gameObject.CompareTag("Empty"))
-        {
-            emptyBrickAnimator.SetTrigger("hitTheBox");
-        }
     }
 
     //Restart Sequence
@@ -171,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void GameOver()
     {
-        gameManager.GameOver();
+        GameManager.instance.GameOver();
     }
 
     void PlayJumpSound()
@@ -182,5 +190,14 @@ public class PlayerMovement : MonoBehaviour
     void PlayDeathImpulse()
     {
         marioBody.AddForce(Vector2.up * deathImpulse, ForceMode2D.Impulse);
+    }
+
+    public void SetStartingPosition(Scene current, Scene next)
+    {
+        if (next.name == "World 1-2")
+        {
+            // change the position accordingly in your World-1-2 case
+            this.transform.position = new Vector3(-10.2399998f, -4.3499999f, 0.0f);
+        }
     }
 }
