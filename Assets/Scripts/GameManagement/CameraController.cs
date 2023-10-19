@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     private float startX; // smallest x-coordinate of the Camera
     private float endX; // largest x-coordinate of the camera
     private float viewportHalfWidth;
+    private Vector3 startPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class CameraController : MonoBehaviour
         offset = this.transform.position.x - player.position.x;
         startX = this.transform.position.x;
         endX = endLimit.transform.position.x - viewportHalfWidth;
+        startPosition = this.transform.position;
         // player = PlayerMovement.instance.transform;
     }
 
@@ -33,5 +35,9 @@ public class CameraController : MonoBehaviour
         // check if desiredX is within startX and endX
         if (desiredX > startX && desiredX < endX)
             this.transform.position = new Vector3(desiredX, this.transform.position.y, this.transform.position.z);
+    }
+    public void GameRestart()
+    {
+        transform.position = startPosition;
     }
 }

@@ -3083,6 +3083,7 @@ GameObject:
   - component: {fileID: 1615887408}
   - component: {fileID: 1615887407}
   - component: {fileID: 1615887411}
+  - component: {fileID: 1615887412}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3188,6 +3189,34 @@ MonoBehaviour:
   player: {fileID: 125343553}
   endLimit: {fileID: 1591781440}
   startLimit: {fileID: 180023895}
+--- !u!114 &1615887412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615887406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585ce86e7597d48a9aabce3e0a15874a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7d0b60cae93364285b7016535aabadb9, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1615887411}
+        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
+        m_MethodName: GameRestart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1623922412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1281590152429701284, guid: e104fbf701728485e83617b39213188e, type: 3}
